@@ -33,6 +33,6 @@ func decider(value int) {
 	case 0:
 		fmt.Println("You Chose To Quit")
 		fmt.Println("-----------------")
-		fmt.Println("Good Byyyyyee")
+		fmt.Println("Good Bye")
 	}
 }
