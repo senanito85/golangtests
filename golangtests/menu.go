@@ -10,7 +10,7 @@ func main() {
 }
 
 func Starter() {
-	multiline2 := "Welcome! Please make your choice: \n" + "----------------------------------- \n" + "1. Option One \n" + "2. Option Two \n" +
+	multiline2 := "Welcome! Please make your choice: \n" + "------------------------------ \n" + "1. Option One \n" + "2. Option Two \n" +
 		"3. Option Three \n" + "0. Exit \n" + "----------------- \n" + "Your Choice is: "
 	fmt.Print(multiline2)
 	var usersChoice int
@@ -32,6 +32,7 @@ func decider(value int) {
 		Starter()
 	case 0:
 		fmt.Println("You Chose To Quit")
-		fmt.Println("Good Bye")
+		fmt.Println("-----------------")
+		fmt.Println("Good Byyyyyee")
 	}
 }
