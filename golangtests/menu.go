@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	lib "ifelse"
+	libtwo "psclies"
 )
 
 func main() {
@@ -26,6 +27,7 @@ func decider(value int) {
 		Starter()
 	case 2:
 		fmt.Println("You Chose Two, try again \n")
+		libtwo.Setter()
 		Starter()
 	case 3:
 		fmt.Println("You Chose Three, try again \n")
