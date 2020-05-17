@@ -3,17 +3,40 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("hello")
-	a := 20.45
-	b := 34.89
+	y := 11
+	var ar [10]int
+	brr := [10]int{11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 
-	// Subtraction of two
-	// floating-point number
-	c := b - a
+	for i := 0; i < len(ar); i++ {
+		ar[i] = y
+		y = 1 + y
+	}
+	fmt.Println(ar)
+	fmt.Println(brr)
 
-	// Display the result
-	fmt.Printf("Result is: %f", c)
+	//----------------------------------------------------------------
+	intArray := [5]int{10, 20, 30, 40, 50}
 
-	// Display the type of c variable
-	fmt.Printf("\nThe type of c is : %T", c)
+	fmt.Println("\n--------------- Example 1 --------------------\n")
+	for i := 0; i < len(intArray); i++ {
+		fmt.Println(intArray[i])
+	}
+
+	fmt.Println("\n---------------Example 2--------------------\n")
+	for index, element := range intArray {
+		fmt.Println(index, "=>", element)
+
+	}
+
+	fmt.Println("\n---------------Example 3--------------------\n")
+	for _, value := range intArray {
+		fmt.Println(value)
+	}
+
+	j := 0
+	fmt.Println("\n---------------Example 4--------------------\n")
+	for range intArray {
+		fmt.Println(intArray[j])
+		j++
+	}
 }
