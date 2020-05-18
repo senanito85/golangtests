@@ -26,5 +26,6 @@ func NewPerson(name string, age int) Person {
 func main() {
 	//p := person{name: "Sanan", age: 34, alive: true}
 	//fmt.Println(p)
+	//
 	NewPerson("Sanan", 35).Greet()
 }
