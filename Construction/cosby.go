@@ -5,6 +5,7 @@ import "fmt"
 type Person interface {
 	Greet()
 }
+
 type person struct {
 	name string
 	age  int
@@ -16,7 +17,7 @@ func (p person) Greet() {
 }
 
 func NewPerson(name string, age int) Person {
-	return &person{
+	return person{
 		name: name,
 		age:  age,
 	}
