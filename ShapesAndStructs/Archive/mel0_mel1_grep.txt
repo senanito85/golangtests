@@ -1,0 +1,260 @@
+:trunk sanan.ibrahimov$ grep -ir mel[01] *
+auth/people/coretixautomation:key:ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAxfuGqSB9oMM2GrHnUmNyytu7JKMk+gJp2mwZQuJqSRApTfnkMyMH3g6RNSv3jb+HsWWzQXZ93VXG57X6d3mEaEM0Vp3vIAo9Tplkjp1Fz1nUmTMIqddJ6R3VdQcOzFhrYHja7b0QeeDCy5d90UnKxIAuScRFGMZINeJbwdOiMRp8VJYPO77zv2qcmEM/o11FxK/QFy8IAFu9XBUHugQ4m3ORdmeo9RE2Xr61oKemC01xMC0YE2pjKkOz7shkLBJN0NHS9MyGLYoJdaWtZmsmuZw7KYvXtKskV3IPocX+jPuVtQum8Kl1tTxaNhLwLypKHC9cc3PRoVgsXagsBwv/P+dvm3/Q4H3BMR1qq+VVN4B5CmUNGDzBaiGXaZ269YFnwKF6XKfWuDoXeSBMiAfKP7m36DuaF6GKoITwXmOCVAq5qWpdz9ecJkGoRFE9h42Y8KWfwfNfuoa3JJ8i0LIVD7zINdH6jqcU3VUXx2NMPpHDOEHEPumtcdOVBtPzgUNPkYEEhGavUtiyqq1PXf9fIP8xSIjyPM1td65ypoTI0B8ScFFVkGfgztOJqNO6a2vydmBRRWRCS85Qgq7eDu27tohfDYtY9Mp31uOUViHYErQnqkAsSrZO7DFVG1xBiAwa6jwoU/n/yCe4hDUsevrE+WZkjMCPLlzLLCQORvf2nak= ptx@mgr1.tix.mel1.coresys.tmcs
+auth/people/londonwasps.account:key:ssh-dss AAAAB3NzaC1kc3MAAAEBAJhKuN+WUHK/mtyhGNvImiJFl5nrW8UGZchkpP11VBArCc6dX3CV50veEfFEHTwAFwSMQ52+h9PgYUeN2z8x5S18mTxv1FCRF3t87Nguu4B6KfjryQBPGsOYadLvmc0C9Q1hFKLfpEsBIYop4pgZT8wR20485kXZ9qKK5bpsFcLao4bP50yMvDc4RkIOfTz6BC9GYTA4LUv/SKsL5kP4NbI7y7K8XPuIYV+w0P6VBfce0zyLqTeEoOYZcVd5mlq9G1tviP/ILGoL2SYcKGu2KQgEByOls06Ehj+ajhJ9+D+lrj9ho3wEtJpjALlE/Lfaw4V5xGnQM1rMe8JbiC8Jf+MAAAAVAJ6RzlVTlcdiHry1gkoLECZCOJYjAAABAQCN1LKm72MEL0fAaiIDJs2/JD9L4/3NZSPZGRYmdBDcraW7h7KjLIdGwTn+DwqsrjxZe2yGi21u2YO9xOom7U6SLgS8MA+q58x8MyP4DQ14HDkJBJUKvBPoegojYC3kmvCMSp/xwP/n4g8qc23rwayBs8YscxORo75Ae6BV7Ya6L11vjDq8k2t30A8B5M8snGZe3JyT2LMqmEGcBcrytsfetvBfWpZBY11L0yDHaV3TQZ6k2KA3djnXjitfDcBUe2/44heb72T/QNCMmxFnHBIMnL61NUNwIkefaV0lRgcu0HjxQ5IcLEDkZ32xg5oR0qPny+fBpQs8wBBYuaR3msfCAAABAQCKS0duUmtOcjcfUsYfZ5m2D9vIUC0MQtogmIfKZaA+/2E8wmgdzETVCa34oh42vxybOszhnCvQRziLUmZIl/UWwLcA9ri299wDvfE7RXgK46u4cSZ7a8vitUABjZ/Sg7GDDHMBN8e8qtKzIGArUqYtYcFGFWbh3LqBBxnfuOSoIVtOjj6S0TbBr/t5CcU282Mws+XxplOeLnWyjw+JT1ea/3n1OwE6XfUs6pUkShJEQbG5GQj2KpMpBTBkB+a64rhNUHrT3ndIAMgyJJFoQcxpYLSwRtyMN2NVt0qVFkS5z9uaZquhh/gNzsbMqm8C0GsY2xWnh2vhwb2IFWjWWduj WEBSYS-3368
+cloudsys/dev/sys/ops/class_overlay/shared/filer_keys/check_filer_disk.sh:#nhs -fping --class fls --cluster "(ash1|ash0|phx1|phx0|mex1|mty1|ams0|ams1|mel0|mel1)"  -businessUnit coresys >./core_filers
+cloudsys/dev/sys/ops/class_overlay/shared/filer_keys/nhs:  lb1-dns.sys.mel1.coresys.tmcs
+cloudsys/dev/sys/ops/class_overlay/shared/filer_keys/find_vfiler.sh:#nhs -fping --class fls --cluster "(ash1|ash0|phx1|phx0|mex1|mty1|ams0|ams1|mel0|mel1)"  -businessUnit coresys >./core_filers
+coresys/prod/epro/app/config/allowed_unix_users:[% IF c.getval('c_cluster').match('^(ams1|mel0|prt1)$') %]
+coresys/prod/epro/mgr/config/allowed_unix_users:[% IF c.getval('c_cluster').match('^(ams1|mel0|prt1)$') %]
+coresys/prod/irep/syslog.tt:[% IF c.getval('c_class') == 'ops' && c.getval('c_cluster').match('^(phx0|ash0|mel1|tools1|tools4|p?j(ash|phx)1|jetson1|jetson4)$') %]
+coresys/prod/tix/ptx/config/include:[% IF c.c_cluster.search('(ash1|mel1|mty1|mex1|lgw1|ams1|phx1|prt1)') %]
+coresys/prod/tix/ptx/config/custom_limits_conf:[% IF c.getval('c_cluster').match('els0|ash0|phx0|stg3|ams0|mel0') %]
+coresys/prod/tix/ptx/overlay/etc/cms-ptx/netapp_auth.json.tt:  "mel1"   : {
+coresys/prod/tix/mgr/config/include:[% IF c.c_cluster.search('(els1|ash1|mel1|mty1|mex1|lgw1|ams1|phx1|prt1)') %]
+coresys/prod/tix/mgr/config/packages:[% IF c.c_cluster.search('(phx0|ash0|ams0|stg3|mel0)') %]
+coresys/prod/tix/mgr/overlay/etc/cron.d/nitcolct:*/5 * * * * root /usr/local/bin/cluster | egrep -q '(mel0|sha0|els0|stg3|ams0)' && [ -f /var/state/MASTER ] && [ ! -f /mgr/shared/home/ptx/i_run_nitcolct ] && /mgr/shared/nitcolct > /tmp/root_nitcolct.out 2>&1
+coresys/prod/tix/mgr/overlay/etc/cron.d/nitcleanup:0 0 * * * root /usr/local/bin/cluster | egrep -q '(mel0|sha0|els0|stg3|ams0)' && [ -f /var/state/MASTER ] &&  /mgr/shared/nitcleanup > /dev/null 2>&1
+coresys/prod/tix/arch/overlay/etc/cms-ptx/netapp_auth.json.tt:  "mel1"   : {
+coresys/prod/sys/ops/config/allowed_unix_users:[% IF c.c_cluster.search('^phx1$|^ash0$|^ash1$|^stg3$|^ams1$|^ams0$|^lgw1$|^mex1$|^mty1$|^mel0$|^mel1$|^prt1$') %]
+coresys/prod/ps/mgr/config/allowed_unix_users:[% IF c.c_cluster.search('mel1|prt1') %]
+coresys/config/include:[% IF c.getval('c_cluster').match('(dev42|ams0|ams1|lgw1|prt1|mel1|stg3|eundev1|jams1|tools3|axsams1)') %]
+coresys/config_groups/provision/config/provision_coresys_ranges:mel0:10.75.192/23
+coresys/config_groups/provision/config/provision_coresys_ranges:mel1:10.75.194/23
+coresys/config_groups/pts_common/config/no_bonded_interfaces:pts1.ps.mel1.coresys.tmcs
+coresys/config_groups/pts_common/config/no_bonded_interfaces:pts2.ps.mel1.coresys.tmcs
+coresys/config_groups/pts_common/overlay/etc/sysconfig/network-scripts/route-eth1.tt:[% IF c.getval('c_instance').match('4|3|2|1') && c.getval('c_cluster').match('(^phx1|ash1|lgw1|ams1|mel1$)') %]
+coresys/config_groups/gmetad_server/overlay/etc/ganglia/gmetad.conf.tt:[%   IF c.getval('c_cluster').match('^(mel1|mex1|mty1|ash1|phx1|lgw1|ams1)') %]
+coresys/config_groups/snmpd/config/custom_snmp_commands:[% IF c.c_class.search('app') AND c.c_product.search('epro') AND c.c_cluster.search('mel0') %]
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:		'MEL0' => array(
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:		'MEL1' => array(
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/rubixstat.php">Production (AUS)</a></li>
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/authstat.php.tt:		'MEL1' => array(
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/authstat.php.tt:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/authstat.php.tt:<li><a href="http://mon.sys.mel1.coresys.tmcs/authstat.php">Production (AUS)</a></li>
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:		'MEL0' => array(
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:		'MEL1' => array(
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/vrtstat.php">Production (AUS)</a></li>
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:		'MEL0' => array(
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:		'MEL1' => array(
+coresys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+coresys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:zone "mel0.coresys.tmcs"  {
+coresys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:         file "sz/mel0.coresys.tmcs";
+coresys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:zone "mel1.coresys.tmcs"  {
+coresys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:         file "sz/mel1.coresys.tmcs";
+coresys/config_groups/ps/mgr_common/config/allowed_unix_users:[% IF c.c_cluster.search('(mel1|prt1)') %]
+coresys/config_groups/mon_common/config/include:[% IF c.c_cluster.search('(ash1|phx1|mel1|stg3|ams1|mex1|mty1|prt1)') %]
+coresys/config_groups/mon_common/overlay/var/www/html/cacti/include/config.php.tt:[% IF c.c_cluster.search('(ash0|ash1|phx0|phx1|stg3|ams0|ams1|lgw1|mel0|mex1|mty1|icash1)') OR c.getval("cluster_sub_type_europe") == 1 -%]
+coresys/config_groups/ops_common/config/ops_mounts:[% IF c.getval('c_cluster').match('^(ash0|ash1|phx0|phx1|ams0|ams1|stg3|lgw1|mel1|mel0|prt1|mex1|mty1)$') %]
+coresys/config_groups/ops_common/overlay/etc/cron.d/standby.tt:1-59/2 * * * * root /usr/local/bin/cluster | egrep -qs 'mel0' && [ -x /usr/local/bin/standby ] && MAX_PARALLEL_COPIES=4 /usr/local/bin/standby
+coresys/config_groups/ops_common/overlay/etc/cron.d/standby.tt:0-58/2 * * * * root /usr/local/bin/cluster | egrep -qs 'mel0' && [ -x /usr/local/bin/standby ] && MAX_PARALLEL_COPIES=4 /usr/local/bin/standby
+coresys/config_groups/ops_common/overlay/etc/profile.d/sst.sh.tt:[% IF c.getval('c_cluster').match('^(ash0|ash1|phx1|ams0|ams1|stg3|lgw1|mel1|mel0|prt1|mex1|mty1)$') %]
+coresys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://zone "mel0.coresys.tmcs"  {
+coresys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://         file "sz/mel0.coresys.tmcs";
+coresys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://zone "mel1.coresys.tmcs"  {
+coresys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://         file "sz/mel1.coresys.tmcs";
+coresys/config_groups/tm_certs/overlay/etc/ticketmaster/certs/tm-ca-bundle.crt:Vdlold6ny1ValrCbSY63fmel1YAxytDpKvfpU01KMrvSK0o3Rch4XfmxEXryUL8E
+coresys/config_groups/global/config/dns_forward_zones:mel0.coresys.tmcs
+coresys/config_groups/global/config/dns_forward_zones:mel1.coresys.tmcs
+coresys/config_groups/global/overlay/etc/logrotate.d/syslog.tt:[% IF c.getval('c_class') == 'ops' && c.getval('c_cluster').match('^(phx0|ash0|mel1|tools1|tools4|p?j(ash|phx)1|jetson1|jetson4)$') %]
+coresys/dev/tix/sis/config/custom_limits_conf:[% IF c.getval('c_cluster').match('els0|ash0|phx0|stg3|ams0|mel0') %]
+coresys/dev/sys/mon/overlay/var/www/html/vrtstat.php:		'MEL0' => array(
+coresys/dev/sys/mon/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+coresys/dev/sys/mon/overlay/var/www/html/vrtstat.php:		'MEL1' => array(
+coresys/dev/sys/mon/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+coresys/dev/sys/mon/overlay/var/www/html/vrtstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/vrtstat.php">Production (AUS)</a></li>
+global_roles/custom_reporting/overlay/var/www/html/old-rubixstat.php:		'MEL0' => array(
+global_roles/custom_reporting/overlay/var/www/html/old-rubixstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+global_roles/custom_reporting/overlay/var/www/html/old-rubixstat.php:		'MEL1' => array(
+global_roles/custom_reporting/overlay/var/www/html/old-rubixstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+global_roles/custom_reporting/overlay/var/www/html/old-rubixstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/rubixstat.php">Production (AUS)</a></li>
+global_roles/custom_reporting/overlay/var/www/html/authstat.php.tt:		'MEL1' => array(
+global_roles/custom_reporting/overlay/var/www/html/authstat.php.tt:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+global_roles/custom_reporting/overlay/var/www/html/authstat.php.tt:<li><a href="http://mon.sys.mel1.coresys.tmcs/authstat.php">Production (AUS)</a></li>
+global_roles/custom_reporting/overlay/var/www/html/vrtstat.php:		'MEL0' => array(
+global_roles/custom_reporting/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+global_roles/custom_reporting/overlay/var/www/html/vrtstat.php:		'MEL1' => array(
+global_roles/custom_reporting/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+global_roles/custom_reporting/overlay/var/www/html/vrtstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/vrtstat.php">Production (AUS)</a></li>
+host/bkm1.sys.mel1.clisys.tmcs/config/nvoffsite_library_name:bkm1_sys_mel1: 1-0.0.1 (ADIC Scalar i500)
+host/mgr1.ps.els1.coresys.tmcs/overlay/usr/local/bin/authmgr3:CITIES=`ls -d /adm/auth32_els1/{Chicago,Detroit,Vancouver,LosAngeles} /adm/auth32_ash1/{NewYork,Orlando,PTS,Toronto,WDC} /adm/auth32_mel1/Aus 2>/dev/null | awk -F/ '{print $NF}'`
+host/mgr1.ps.els1.coresys.tmcs/overlay/usr/local/bin/authmgr3:	DIRS=`find /adm/{auth32_els1,auth32_ash1,auth32_mel1}/${CITY}/Archive/ -type d -name '20[0-9]*' -mtime -2 2>/dev/null`
+host/mgr1.ps.mel1.coresys.tmcs/overlay/usr/local/bin/authmgr3_aus:CITIES=`ls -d /adm/auth32_mel1/Aus 2>/dev/null | awk -F/ '{print $NF}'`
+host/mgr1.ps.mel1.coresys.tmcs/overlay/usr/local/bin/authmgr3_aus:	DIRS=`find /adm/auth32_mel1/${CITY}/Archive/ -type d -name '20[0-9]*' -mtime -2 2>/dev/null`
+host/ops1.sys.mel1.clisys.tmcs/config/nfs_mounts:nls1-clisys.sys.mel0.coresys.tmcs:/vol/vol0 /filer/nls1-clisys.sys.mel0.coresys.tmcs/vol0
+host/ops1.sys.mel1.clisys.tmcs/config/nfs_mounts:nls1-clisys.sys.mel0.coresys.tmcs:/vol/root /filer/nls1-clisys.sys.mel0.coresys.tmcs/root
+host/ops1.sys.mel1.clisys.tmcs/config/nfs_mounts:nls1-clisys.sys.mel0.coresys.tmcs:/vol/backup /filer/nls1-clisys.sys.mel0.coresys.tmcs/backup
+host/ops1.sys.mel1.clisys.tmcs/config/nfs_mounts:nls2-clisys.sys.mel0.coresys.tmcs:/vol/root /filer/nls2-clisys.sys.mel0.coresys.tmcs/root
+host/mgr1.ps.ash1.coresys.tmcs/overlay/usr/local/bin/authmgr3:	DIRS=`find /adm/{auth32_phx1,auth32_ash1,auth32_mel1}/${CITY}/Archive/ -type d -name '20[0-9]*' -mtime -2 2>/dev/null`
+includes/pki/cas/tm_eu_syseng_v1_ca:Vdlold6ny1ValrCbSY63fmel1YAxytDpKvfpU01KMrvSK0o3Rch4XfmxEXryUL8E
+network/10.75.24.0-23/config/ops_mounts:fls1:/vol/auth32_mel1                /fls1/auth32_mel1
+network/10.75.24.0-23/config/mgr_mounts:fls1:/vol/auth32_mel1           /adm/auth32_mel1
+network/10.75.194.0-23/config/mgr_servers:mgr1.tix.mel1.coresys.tmcs
+network/10.75.194.0-23/config/mgr_servers:mgr2.tix.mel1.coresys.tmcs
+network/10.75.194.0-23/config/mgr_servers:mgr1.ps.mel1.coresys.tmcs
+network/10.75.194.0-23/config/mgr_servers:mgr2.ps.mel1.coresys.tmcs
+network/10.75.194.0-23/config/mgr_servers:mgr1.brt.mel1.coresys.tmcs
+network/10.75.194.0-23/config/fls_servers:fls1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/fls_servers:fls2.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/ops_servers:ops1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/ops_servers:ops2.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/ops_servers:ops.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/cyc_servers:cyc1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/lb_servers:lb1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/lb_servers:lb2.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/fw_servers:fw1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/fw_servers:fw2.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel1-tix-ptx  /adm/ptx
+network/10.75.194.0-23/config/mgr_mounts:fls2:/vol/auth32                /adm/auth32_mel1
+network/10.75.194.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel1-ps-pts	/adm/pts
+network/10.75.194.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel1-ps-dpts	/adm/dpts
+network/10.75.194.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel1-brt-mgr/1	/mgr/local
+network/10.75.194.0-23/config/mgr_mounts:fls1/vol/vol0/coresys-mel1-brt-mgr/shared	/mgr/shared
+network/10.75.194.0-23/config/atl_servers:atl1.brt.mel1.coresys.tmcs
+network/10.75.194.0-23/config/atl_servers:atl2.brt.mel1.coresys.tmcs
+network/10.75.194.0-23/config/pts_servers:pts1.ps.mel1.coresys.tmcs
+network/10.75.194.0-23/config/pts_servers:pts2.ps.mel1.coresys.tmcs
+network/10.75.194.0-23/config/backnet_interfaces:vrt1.sys.mel1.coresys.tmcs 10.75.196.20 255.255.255.128 10.75.196.0 10.75.196.128
+network/10.75.194.0-23/config/backnet_interfaces:vrt2.sys.mel1.coresys.tmcs 10.75.196.21 255.255.255.128 10.75.196.0 10.75.196.128
+network/10.75.194.0-23/config/backnet_interfaces:pts1.ps.mel1.coresys.tmcs 10.75.196.38 255.255.255.128 10.75.196.0 10.75.196.128
+network/10.75.194.0-23/config/backnet_interfaces:pts2.ps.mel1.coresys.tmcs 10.75.196.39 255.255.255.128 10.75.196.0 10.75.196.128
+network/10.75.194.0-23/config/bdb_mounts:fls2:/vol/vol0/coresys-mel1-brt-bdb/1   /bdb/local
+network/10.75.194.0-23/config/bdb_mounts:fls2:/vol/vol0/coresys-mel1-brt-bdb/2	/bdb/local
+network/10.75.194.0-23/config/bdb_mounts:fls2:/vol/vol0/coresys-mel1-brt-bdb/shared      /bdb/shared
+network/10.75.194.0-23/config/mon_servers:mon1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/mon_servers:mon2.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/no_bonded_interfaces:vrt1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/no_bonded_interfaces:vrt2.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/loghost:syslog.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/mailrelay:mta.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/edb_servers:edb1.ivr.mel1.websys.tmcs
+network/10.75.194.0-23/config/edb_servers:edb2.ivr.mel1.websys.tmcs
+network/10.75.194.0-23/config/edb_mounts:fls1:/vol/vol0/coresys-mel1-ivr-edb/1   /edb/local
+network/10.75.194.0-23/config/edb_mounts:fls1:/vol/vol0/coresys-mel1-ivr-edb/shared       /edb/shared
+network/10.75.194.0-23/config/nae_servers:nae1.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/nae_servers:nae2.sys.mel1.coresys.tmcs
+network/10.75.194.0-23/config/bdb_servers:bdb1.brt.mel1.coresys.tmcs
+network/10.75.194.0-23/config/bdb_servers:bdb2.brt.mel1.coresys.tmcs
+network/10.75.194.0-23/config/laggy_snapmirrors:fls4_sys_phx1_auth32_mel1=9360000
+network/10.75.194.0-23/config/ptx_servers:ptx1.tix.mel1.coresys.tmcs
+network/10.75.194.0-23/config/ptx_servers:ptx2.tix.mel1.coresys.tmcs
+network/10.75.194.0-23/config/ptx_servers:ptx3.tix.mel1.coresys.tmcs
+network/10.75.194.0-23/config/ptx_servers:ptx4.tix.mel1.coresys.tmcs
+network/10.75.194.0-23/config/ptx_servers:ptx5.tix.mel1.coresys.tmcs
+network/10.75.194.0-23/config/neighbors:mel0
+network/10.75.192.0-23/config/mgr_servers:mgr1.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/mgr_servers:mgr2.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/mgr_servers:mgr.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/epro_servers:app.epro.mel0.coresys.tmcs
+network/10.75.192.0-23/config/epro_servers:app1.epro.mel0.coresys.tmcs
+network/10.75.192.0-23/config/epro_servers:app2.epro.mel0.coresys.tmcs
+network/10.75.192.0-23/config/epro_servers:tdb1.epro.mel0.coresys.tmcs
+network/10.75.192.0-23/config/epro_servers:mgr1.epro.mel0.coresys.tmcs
+network/10.75.192.0-23/config/fls_servers:fls1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/ops_servers:ops1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/ops_servers:ops2.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/ops_servers:ops.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/cyc_servers:cyc1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/tdb_mounts:fls1:/vol/vol0/coresys-mel0-epro-tdb/1/redo		/tdb/oracle/redo
+network/10.75.192.0-23/config/tdb_mounts:fls1:/vol/vol0/coresys-mel0-epro-tdb/1/oradata	/tdb/oracle/oradata
+network/10.75.192.0-23/config/fw_servers:fw1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/fw_servers:fw2.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/vrt_servers:vrt1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel0-tix-ptx  /adm/ptx
+network/10.75.192.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel0-epro-mgr	/adm/mgr
+network/10.75.192.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel0-epro-tdb	/adm/tdb
+network/10.75.192.0-23/config/mgr_mounts:fls1:/vol/vol0/coresys-mel0-epro-app	/adm/app
+network/10.75.192.0-23/config/bast_servers:bast1.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/bast_servers:bast2.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/xen_servers:pool1-xen1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/xen_servers:pool1-xen2.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/mon_servers:mon1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/mon_servers:mon2.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/loghost:syslog.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/mailrelay:mta.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/laggy_snapmirrors:fls1_sys_mel0_vhost8=2880000
+network/10.75.192.0-23/config/ntp_servers:gig.sys.mel1.coresys.tmcs
+network/10.75.192.0-23/config/ptx_servers:ptx1.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/ptx_servers:ptx2.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/ptx_servers:ptx3.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/ptx_servers:ptx4.tix.mel0.coresys.tmcs
+network/10.75.192.0-23/config/rsa_servers:rsa1.sys.mel0.coresys.tmcs
+network/10.75.192.0-23/config/neighbors:mel1
+network/10.38.112.0-23/config/neighbors:mel0
+network/10.61.2.0-24/config/dns_searchpath:sys.mel0.coresys.tmcs
+network/10.61.2.0-24/config/loghost:syslog.sys.mel0.coresys.tmcs
+network/10.61.2.0-24/config/mailrelay:mta.sys.mel0.coresys.tmcs
+network/10.61.2.0-24/config/iptt_mailrelay:mta.sys.mel0.coresys.tmcs
+network/10.75.220.0-24/config/gmond_collector_hosts:ops1.sys.mel1.clisys.tmcs
+network/10.75.220.0-24/config/syslog_local:syslog.sys.mel1.clisys.tmcs
+network/10.75.220.0-24/config/bootserver:ops.sys.mel0.coresys.tmcs
+stratsys_old/config_groups/role/dns_server/config/dns_forward_zones:mel0.coresys.tmcs
+stratsys_old/config_groups/role/dns_server/config/dns_forward_zones:mel1.coresys.tmcs
+stratsys_old/config_groups/role/dns_server/config/dns_forward_zones:mel1a.coresys.tmcs
+uksys/prod/epro/app/config/allowed_unix_users:[% IF c.getval('c_cluster').match('^(ams1|mel0|prt1)$') %]
+uksys/prod/epro/mgr/config/allowed_unix_users:[% IF c.getval('c_cluster').match('^(ams1|mel0|prt1)$') %]
+uksys/prod/irep/syslog.tt:[% IF c.getval('c_class') == 'ops' && c.getval('c_cluster').match('^(phx0|ash0|mel1|tools1|tools4|p?j(ash|phx)1|jetson1|jetson4)$') %]
+uksys/prod/tix/ptx/config/include:[% IF c.c_cluster.search('(ash1|mel1|mty1|mex1|lgw1|ams1|phx1|prt1)') %]
+uksys/prod/tix/ptx/config/custom_limits_conf:[% IF c.getval('c_cluster').match('els0|ash0|phx0|stg3|ams0|mel0') %]
+uksys/prod/tix/ptx/overlay/etc/cms-ptx/netapp_auth.json.tt:  "mel1"   : {
+uksys/prod/tix/mgr/config/include:[% IF c.c_cluster.search('(els1|ash1|mel1|mty1|mex1|lgw1|ams1|phx1|prt1)') %]
+uksys/prod/tix/mgr/config/packages:[% IF c.c_cluster.search('(phx0|ash0|ams0|stg3|mel0)') %]
+uksys/prod/tix/mgr/overlay/etc/cron.d/nitcolct:*/5 * * * * root /usr/local/bin/cluster | egrep -q '(mel0|sha0|els0|stg3|ams0)' && [ -f /var/state/MASTER ] && [ ! -f /mgr/shared/home/ptx/i_run_nitcolct ] && /mgr/shared/nitcolct > /tmp/root_nitcolct.out 2>&1
+uksys/prod/tix/mgr/overlay/etc/cron.d/nitcleanup:0 0 * * * root /usr/local/bin/cluster | egrep -q '(mel0|sha0|els0|stg3|ams0)' && [ -f /var/state/MASTER ] &&  /mgr/shared/nitcleanup > /dev/null 2>&1
+uksys/prod/tix/arch/overlay/etc/cms-ptx/netapp_auth.json.tt:  "mel1"   : {
+uksys/prod/sys/ops/config/allowed_unix_users:[% IF c.c_cluster.search('^phx1$|^ash0$|^ash1$|^stg3$|^ams1$|^ams0$|^lgw1$|^mex1$|^mty1$|^mel0$|^mel1$|^prt1$') %]
+uksys/prod/ps/mgr/config/allowed_unix_users:[% IF c.c_cluster.search('mel1|prt1') %]
+uksys/config/include:[% IF c.getval('c_cluster').match('(dev42|ams0|ams1|lgw1|prt1|mel1|stg3|eundev1|jams1|tools3|axsams1)') %]
+uksys/config_groups/provision/config/provision_coresys_ranges:mel0:10.75.192/23
+uksys/config_groups/provision/config/provision_coresys_ranges:mel1:10.75.194/23
+uksys/config_groups/pts_common/config/no_bonded_interfaces:pts1.ps.mel1.coresys.tmcs
+uksys/config_groups/pts_common/config/no_bonded_interfaces:pts2.ps.mel1.coresys.tmcs
+uksys/config_groups/pts_common/overlay/etc/sysconfig/network-scripts/route-eth1.tt:[% IF c.getval('c_instance').match('4|3|2|1') && c.getval('c_cluster').match('(^phx1|ash1|lgw1|ams1|mel1$)') %]
+uksys/config_groups/gmetad_server/overlay/etc/ganglia/gmetad.conf.tt:[%   IF c.getval('c_cluster').match('^(mel1|mex1|mty1|ash1|phx1|lgw1|ams1)') %]
+uksys/config_groups/snmpd/config/custom_snmp_commands:[% IF c.c_class.search('app') AND c.c_product.search('epro') AND c.c_cluster.search('mel0') %]
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:		'MEL0' => array(
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:		'MEL1' => array(
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/rubixstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/rubixstat.php">Production (AUS)</a></li>
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/authstat.php.tt:		'MEL1' => array(
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/authstat.php.tt:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/authstat.php.tt:<li><a href="http://mon.sys.mel1.coresys.tmcs/authstat.php">Production (AUS)</a></li>
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:		'MEL0' => array(
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:		'MEL1' => array(
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/vrtstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/vrtstat.php">Production (AUS)</a></li>
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:		'MEL0' => array(
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:		'MEL1' => array(
+uksys/config_groups/ganglia_custom_reporting/overlay/var/www/html/ptxstat.php.tt:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+uksys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:zone "mel0.coresys.tmcs"  {
+uksys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:         file "sz/mel0.coresys.tmcs";
+uksys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:zone "mel1.coresys.tmcs"  {
+uksys/config_groups/dnscache/overlay/chroot/named/etc/named.conf:         file "sz/mel1.coresys.tmcs";
+uksys/config_groups/ps/mgr_common/config/allowed_unix_users:[% IF c.c_cluster.search('(mel1|prt1)') %]
+uksys/config_groups/mon_common/config/include:[% IF c.c_cluster.search('(ash1|phx1|mel1|stg3|ams1|mex1|mty1|prt1)') %]
+uksys/config_groups/mon_common/overlay/var/www/html/cacti/include/config.php.tt:[% IF c.c_cluster.search('(ash0|ash1|phx0|phx1|stg3|ams0|ams1|lgw1|mel0|mex1|mty1|icash1)') OR c.getval("cluster_sub_type_europe") == 1 -%]
+uksys/config_groups/ops_common/config/ops_mounts:[% IF c.getval('c_cluster').match('^(ash0|ash1|phx0|phx1|ams0|ams1|stg3|lgw1|mel1|mel0|prt1|mex1|mty1)$') %]
+uksys/config_groups/ops_common/overlay/etc/cron.d/standby.tt:1-59/2 * * * * root /usr/local/bin/cluster | egrep -qs 'mel0' && [ -x /usr/local/bin/standby ] && MAX_PARALLEL_COPIES=4 /usr/local/bin/standby
+uksys/config_groups/ops_common/overlay/etc/cron.d/standby.tt:0-58/2 * * * * root /usr/local/bin/cluster | egrep -qs 'mel0' && [ -x /usr/local/bin/standby ] && MAX_PARALLEL_COPIES=4 /usr/local/bin/standby
+uksys/config_groups/ops_common/overlay/etc/profile.d/sst.sh.tt:[% IF c.getval('c_cluster').match('^(ash0|ash1|phx1|ams0|ams1|stg3|lgw1|mel1|mel0|prt1|mex1|mty1)$') %]
+uksys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://zone "mel0.coresys.tmcs"  {
+uksys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://         file "sz/mel0.coresys.tmcs";
+uksys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://zone "mel1.coresys.tmcs"  {
+uksys/config_groups/ops_common/overlay/chroot/named/etc/named.conf://         file "sz/mel1.coresys.tmcs";
+uksys/config_groups/tm_certs/overlay/etc/ticketmaster/certs/tm-ca-bundle.crt:Vdlold6ny1ValrCbSY63fmel1YAxytDpKvfpU01KMrvSK0o3Rch4XfmxEXryUL8E
+uksys/config_groups/global/config/dns_forward_zones:mel0.coresys.tmcs
+uksys/config_groups/global/config/dns_forward_zones:mel1.coresys.tmcs
+uksys/config_groups/global/overlay/etc/logrotate.d/syslog.tt:[% IF c.getval('c_class') == 'ops' && c.getval('c_cluster').match('^(phx0|ash0|mel1|tools1|tools4|p?j(ash|phx)1|jetson1|jetson4)$') %]
+uksys/dev/tix/sis/config/custom_limits_conf:[% IF c.getval('c_cluster').match('els0|ash0|phx0|stg3|ams0|mel0') %]
+uksys/dev/sys/mon/overlay/var/www/html/vrtstat.php:		'MEL0' => array(
+uksys/dev/sys/mon/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel0.coresys.tmcs.',
+uksys/dev/sys/mon/overlay/var/www/html/vrtstat.php:		'MEL1' => array(
+uksys/dev/sys/mon/overlay/var/www/html/vrtstat.php:			'name' => 'mon.sys.mel1.coresys.tmcs.',
+uksys/dev/sys/mon/overlay/var/www/html/vrtstat.php:<li><a href="http://mon.sys.mel0.coresys.tmcs/vrtstat.php">Production (AUS)</a></li>

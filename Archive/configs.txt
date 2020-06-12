@@ -1,0 +1,19 @@
+# command-line-arguments
+./main.go:26:11: undefined: NetappFilerClient
+./main.go:66:9: undefined: NewNetappCollector
+./main.go:83:29: undefined: NetappFilerClient
+./main.go:92:46: undefined: NetappFilerClient
+./main.go:93:15: undefined: NetappFiler
+./main.go:108:17: undefined: NewNetappClient
+./main.go:113:30: undefined: NetappFilerClient
+./main.go:119:7: undefined: NewNetappClient
+./main.go:119:23: undefined: NetappFiler
+
+
+netapp_filers.yaml
+
+
+ - name: xxxx
+   host: netapp-bb98.labx.company
+   username: <username>
+   password: <password>
