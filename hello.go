@@ -20,7 +20,7 @@ func calculateenvUtil(remaining float32, start float32, dealer dealerShip) (perc
 
 func main() {
 
-	//method one
+	//method one.......#
 	d := dealerShip{name: "A1 Auto", city: "Melbourne"}
 	fmt.Println("City:   ", d.city)
 	sold, name := calculateenvUtil(149, 200, d)
